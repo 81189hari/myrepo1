@@ -68,11 +68,6 @@ public class Arrayoperations{
 
         {
 
-
-
-
-
-
                     Scanner sc = new Scanner(System.in);
 
                     System.out.print("Enter size of the array: ");
@@ -82,30 +77,30 @@ public class Arrayoperations{
                     System.out.println("Enter " + n + " elements (integers):");
                     for (int i = 0; i < n; i++) {
 
-
-                        arr[i] = sc.nextInt();
+                            arr[i] = sc.nextInt();
                     }
 
-        int target=4;
+                 int target=4;
+
+              //calling linearsearch 
+              int linearresult=linearsearch(arr,target);
+              if(linearresult==-1)
+              {
+                    System.out.println("element is not found in the array");
+
+              }
+              else {
+                    System.out.println("  linearsearch-element is found in index  " +  linearresult);
+
+              }
+
 
                     // Sort the array using bubble sort
                     bubblesort(arr);
 
-                    System.out.println("Sorted array:");
-                    for (int num : arr)
+                //calling binarysearch   
 
-                    {
-
-
-                                  System.out.print(num + " ");
-                    }
-
-
-
-                    int binaryresult=binarysearch( arr,target);
-
-
-
+                int binaryresult=binarysearch( arr,target);
               if(binaryresult==-1)
               {
                      System.out.println("element is not found in the array");
@@ -119,19 +114,18 @@ public class Arrayoperations{
 
               }
 
+                 //printng sorted array
 
 
+               System.out.println("Sorted array:");
+                    for (int num : arr)
 
-              int linearresult=linearsearch(arr,target);
-              if(linearresult==-1)
-              {
-                    System.out.println("element is not found in the array");
+                    {
 
-              }
-              else {
-                    System.out.println("  linearsearch-element is found in index  " +  linearresult);
+                   System.out.print(num + " ");
+                            
+                }
 
-              }
 
 
 
@@ -148,3 +142,4 @@ public class Arrayoperations{
 
 
 }
+
